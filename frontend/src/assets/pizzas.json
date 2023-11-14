@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "imageUrl": "http://localhost:5500/public/img/0.png",
+    "imageUrl": "img/0.png",
     "title": "Пепперони Фарш с перцем 🍒",
     "types": [0, 1],
     "sizes": [26, 30, 40],
@@ -11,7 +11,7 @@
   },
   {
     "id": 1,
-    "imageUrl": "http://localhost:5500/public/img/1.png",
+    "imageUrl": "img/1.png",
     "title": "Сырная",
     "types": [0],
     "sizes": [26, 40],
@@ -21,7 +21,7 @@
   },
   {
     "id": 2,
-    "imageUrl": "http://localhost:5500/public/img/2.png",
+    "imageUrl": "img/2.png",
     "title": "Цыпленок",
     "types": [0],
     "sizes": [26, 40],
@@ -31,7 +31,7 @@
   },
   {
     "id": 3,
-    "imageUrl": "http://localhost:5500/public/img/3.png",
+    "imageUrl": "img/3.png",
     "title": "Кисло-сладкий цыпленок",
     "types": [1],
     "sizes": [26, 30, 40],
@@ -41,7 +41,7 @@
   },
   {
     "id": 4,
-    "imageUrl": "http://localhost:5500/public/img/0.png",
+    "imageUrl": "img/0.png",
     "title": "Чизбургер-пицца",
     "types": [0, 1],
     "sizes": [26, 30, 40],
@@ -51,7 +51,7 @@
   },
   {
     "id": 5,
-    "imageUrl": "http://localhost:5500/public/img/1.png",
+    "imageUrl": "img/1.png",
     "title": "Крэйзи пепперони",
     "types": [0],
     "sizes": [30, 40],
@@ -61,7 +61,7 @@
   },
   {
     "id": 6,
-    "imageUrl": "http://localhost:5500/public/img/2.png",
+    "imageUrl": "img/2.png",
     "title": "Пепперони",
     "types": [0, 1],
     "sizes": [26, 30, 40],
@@ -71,7 +71,7 @@
   },
   {
     "id": 7,
-    "imageUrl": "http://localhost:5500/public/img/3.png",
+    "imageUrl": "img/3.png",
     "title": "Маргарта",
     "types": [0, 1],
     "sizes": [26, 30, 40],
@@ -81,7 +81,7 @@
   },
   {
     "id": 8,
-    "imageUrl": "http://localhost:5500/public/img/0.png",
+    "imageUrl": "img/0.png",
     "title": "Четыре сезона",
     "types": [0, 1],
     "sizes": [26, 30, 40],
@@ -91,7 +91,7 @@
   },
   {
     "id": 9,
-    "imageUrl": "http://localhost:5500/public/img/1.png",
+    "imageUrl": "img/1.png",
     "title": "Овощи и грибы",
     "types": [0, 1],
     "sizes": [26, 30, 40],

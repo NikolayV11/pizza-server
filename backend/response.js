@@ -3,6 +3,7 @@ const getDataFile = require("./edit files/getDataFile");
 const dataChange = require("./edit files/dataChange");
 
 module.exports = function processingRequest({ path, method, obj }) {
+  console.log(path);
   const pathFiles = "./files/json dase/";
   const pathes = path.split("/").filter((item) => {
     return item != "";
