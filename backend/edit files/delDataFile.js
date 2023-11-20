@@ -4,8 +4,6 @@ const fs = require("fs");
 const createWriteFile = require("./createWriteFile");
 // чтение файла
 const getDataFile = require("./getDataFile");
-// копирование данных
-const copyingData = require("./copyingData");
 
 // удаление и резервное копирование данных
 module.exports = function delDataFile(filePath, argument, data) {

@@ -20,12 +20,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.all("*", (req, res, next) => {
-  // console.log(req.url, req.method, req.body);
-  // if (req.url === "/data") {
-  //   res.send(getDataFile("./files/json dase/data.json"));
-  //   res.status(200);
-  // }
-  res.send(require("./response")({ path: req.url, method: req.method, obj: req.body }));
+  // console.log(req);
+  res.send(require("./response")({ req: req }));
   res.end();
   next();
 });
