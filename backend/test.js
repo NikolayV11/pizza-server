@@ -1,6 +1,6 @@
-const dataChange = require("./edit files/dataChange");
+// const dataChange = require("./edit files/dataChange");
 
-console.log(dataChange("./files/json dase/basket.json", { q: "q" }));
+// console.log(dataChange("./files/json dase/basket.json", { q: "q" }));
 
 // // добавление в карзину
 // app.post("/basket", (req, res) => {
@@ -59,3 +59,10 @@ console.log(dataChange("./files/json dase/basket.json", { q: "q" }));
 //   res.status(200);
 //   res.end();
 // });
+
+const arr = [
+  { title: "a", c: "f" },
+  { title: "u", c: "d" },
+];
+
+console.log(arr[0].title ? "a" : false);

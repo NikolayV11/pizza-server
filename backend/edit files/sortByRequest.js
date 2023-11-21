@@ -1,4 +1,5 @@
 const pageLimitData = require("./pageLimit");
+const filteringOnRequest = require("./filteringOnRequest");
 
 module.exports = function sortByRequest(req) {
   //переданные параметры
@@ -29,6 +30,11 @@ module.exports = function sortByRequest(req) {
     // для сортировки элементов
     if (sortingElements[0][`${keysObject[0]}`] && sortingElements[1][`${keysObject[1]}`]) {
       console.log("if №2");
+      return filteringOnRequest(
+        `./files/json dase${req.path}.json`,
+        option[`${keysObject[0]}`],
+        option[`${keysObject[1]}`],
+      );
     }
   }
 };
