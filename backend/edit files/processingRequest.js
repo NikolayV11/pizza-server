@@ -14,23 +14,21 @@ module.exports = function processingRequest(req) {
 
   if (method === "GET") {
     console.log("GET");
-    console.log(pathes[0]);
+    // console.log(pathes[0]);
     return getDataFile(pathFiles + `${pathes[0]}.json`);
   }
 
   if (method === "POST") {
     console.log("POST");
     console.log(pathes[0]);
-    dataChange(pathFiles + `${pathes[0]}.json`, obj);
+    return dataChange(pathFiles + `${pathes[0]}.json`, obj);
   }
 
   if (method === "OPTIONS") {
+    if (pathes.length < 2) return false;
     console.log("OPTIONS");
     console.log(pathes);
 
-    delDataFile(pathFiles + `${pathes[0]}.json`, "id", +pathes[1]);
-  } else {
-    console.log("404");
-    return "404";
+    return delDataFile(pathFiles + `${pathes[0]}.json`, "id", +pathes[1]) ? 200 : 304;
   }
 };

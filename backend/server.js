@@ -20,7 +20,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.all("*", (req, res, next) => {
-  // console.log(req);
   res.send(require("./response")({ req: req }));
   res.end();
   next();
