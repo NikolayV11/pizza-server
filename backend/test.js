@@ -60,9 +60,21 @@
 //   res.end();
 // });
 
-const arr = [
-  { title: "a", c: "f" },
-  { title: "u", c: "d" },
-];
+// const arr = [
+//   { title: "a", c: "f" },
+//   { title: "u", c: "d" },
+// ];
 
-console.log(arr[0].title ? "a" : false);
+// console.log(arr[0].title ? "a" : false);
+
+const getDataFile = require("./edit files/getDataFile");
+
+const pathFaile = "./files/json dase/data.json";
+
+const data = getDataFile(pathFaile);
+
+console.log(
+  data.sort((a, b) => {
+    return a.rating > b.rating ? 1 : -1;
+  }),
+);
