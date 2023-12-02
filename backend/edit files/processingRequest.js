@@ -19,12 +19,14 @@ module.exports = function processingRequest(req) {
   }
 
   if (method === "POST") {
+    if (pathes[0] === "data") return false;
     console.log("POST");
     console.log(pathes[0]);
     return dataChange(pathFiles + `${pathes[0]}.json`, obj);
   }
 
   if (method === "OPTIONS") {
+    if (pathes[0] === "data") return false;
     if (pathes.length < 2) return false;
     console.log("OPTIONS");
     console.log(pathes);

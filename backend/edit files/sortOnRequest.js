@@ -1,14 +1,12 @@
-const getDataFile = require("./getDataFile");
-
-module.exports = function sortOnRequest(path, sort, order = "desc") {
-  if (!getDataFile(path)) return false;
-
-  const fileData = getDataFile(path);
+// сщртировка по(возрастанию/убыванию)
+module.exports = function sortOnRequest(data, sort, order = "desc") {
+  const fileData = data;
+  console.log("sortOnRequest", data.length);
   if (fileData.length === 0) return false;
 
   console.log("sort", sort);
   console.log("order", order);
-
+  if (order === "") order = "desc";
   if (order === "desc" || order === "asc") {
     fileData.sort((a, b) => {
       // По убыванию

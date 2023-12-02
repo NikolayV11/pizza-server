@@ -7,8 +7,6 @@ const getDataFile = require("./getDataFile");
 
 // удаление и резервное копирование данных
 module.exports = function delDataFile(filePath, argument, data) {
-  if (filePath === "data.json") return false;
-
   if (!fs.existsSync(filePath)) return false;
 
   // считываем данный из файла откуда ходим удалить данные
@@ -19,7 +17,7 @@ module.exports = function delDataFile(filePath, argument, data) {
   let a = oldData.some((item) => {
     return item[`${argument}`] === data;
   });
-
+  console.log("a", a);
   if (!a) return console.log(false);
 
   //копирование данных
