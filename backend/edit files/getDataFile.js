@@ -6,5 +6,4 @@ module.exports = function getDataFile(filePath) {
 
     return dataFile;
   }
-  return false;
 };

@@ -57,16 +57,12 @@ module.exports = function sortByRequest(req) {
       // для сортировки элементов (По убыванию/возрастанию)
       if (sortingElements[0][`${keysObject[i]}`]) {
         console.log("if №2", option);
-        console.log(option[`${keysObject[i]}`]);
-        console.log(
-          sortingElements[1][`${keysObject[i + 1]}`] ? option[`${keysObject[i + 1]}`] : "",
-        );
+
         dataFile.result = sortOnRequest(
           dataFile.result,
           option[`${keysObject[i]}`],
           sortingElements[1][`${keysObject[i + 1]}`] ? option[`${keysObject[i + 1]}`] : "",
         );
-        console.log("posle", dataFile);
       }
       // для поиска
       if (keysObject[i] === "search") {
@@ -116,6 +112,6 @@ module.exports = function sortByRequest(req) {
       }
     }
   }
-
+  console.log("finish", dataFile);
   return dataFile;
 };

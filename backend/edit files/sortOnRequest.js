@@ -2,10 +2,8 @@
 module.exports = function sortOnRequest(data, sort, order = "desc") {
   const fileData = data;
   console.log("sortOnRequest", data.length);
-  if (fileData.length === 0) return false;
+  if (fileData.length === 0) return [];
 
-  console.log("sort", sort);
-  console.log("order", order);
   if (order === "") order = "desc";
   if (order === "desc" || order === "asc") {
     fileData.sort((a, b) => {
@@ -20,5 +18,5 @@ module.exports = function sortOnRequest(data, sort, order = "desc") {
     });
     return fileData;
   }
-  return false;
+  return fileData;
 };
