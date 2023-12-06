@@ -79,12 +79,12 @@ module.exports = function sortByRequest(req) {
         console.log("title");
         console.log(option[`${keysObject[0]}`]);
         dataFile.result = getSearchByTitle(dataFile.result, option[`${keysObject[i]}`]);
-      }
-      // для фильтрации совподения во всех полях
-      if (dataFile.result[0]?.[`${keysObject[i]}`] != undefined) {
+      } else if (dataFile.result[0]?.[`${keysObject[i]}`] != undefined) {
+        // для фильтрации совподения во всех полях
         console.log("filter", keysObject[i]);
         dataFile.result = getFilter(dataFile.result, keysObject[i], option[`${keysObject[i]}`]);
       }
+
       //
     }
     // методы если страницу не указывали
@@ -102,17 +102,17 @@ module.exports = function sortByRequest(req) {
         console.log("search");
         dataFile = getSearch(dataFile, option[`${keysObject[i]}`]);
       }
-      // для фильтрации совподения во всех полях
-      if (dataFile[0]?.[`${keysObject[i]}`] != undefined) {
-        console.log("key", keysObject[i]);
-        console.log("значение", option[`${keysObject[i]}`]);
-        dataFile = getFilter(dataFile, keysObject[i], option[`${keysObject[i]}`]);
-      }
+
       // // для поиска в title
       if (keysObject[i] === "title") {
         console.log("title");
         console.log(option[`${keysObject[0]}`]);
         dataFile = getSearchByTitle(dataFile, option[`${keysObject[i]}`]);
+      } else if (dataFile[0]?.[`${keysObject[i]}`] != undefined) {
+        // для фильтрации совподения во всех полях
+        console.log("key", keysObject[i]);
+        console.log("значение", option[`${keysObject[i]}`], dataFile[0]?.[`${keysObject[i]}`]);
+        dataFile = getFilter(dataFile, keysObject[i], option[`${keysObject[i]}`]);
       }
     }
   }

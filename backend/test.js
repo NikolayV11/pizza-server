@@ -67,14 +67,16 @@
 
 // console.log(arr[0].title ? "a" : false);
 
-const getDataFile = require("./edit files/getDataFile");
+// const getDataFile = require("./edit files/getDataFile");
 
-const pathFaile = "./files/json dase/data.json";
+// const pathFaile = "./files/json dase/data.json";
 
-const data = getDataFile(pathFaile);
+// const data = getDataFile(pathFaile);
 
-console.log(
-  data.sort((a, b) => {
-    return a.rating > b.rating ? 1 : -1;
-  }),
-);
+// console.log(
+//   data.sort((a, b) => {
+//     return a.rating > b.rating ? 1 : -1;
+//   }),
+// );
+
+console.log("fond".replace("f", "F"));
