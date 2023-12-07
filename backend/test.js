@@ -78,5 +78,16 @@
 //     return a.rating > b.rating ? 1 : -1;
 //   }),
 // );
-
-console.log("fond".replace("f", "F"));
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let limit = 2;
+let page = 5; // какую страницу запрашиваем
+let numberPage = Math.ceil(arr.length / limit); // количество страниц
+if (page > numberPage) {
+  if (arr.length > 0) {
+    console.log(arr.splice(limit * 1 - limit, limit));
+  } else {
+    console.log("такой страницы нет");
+  }
+} else {
+  console.log(arr.splice(limit * page - limit, limit));
+}
