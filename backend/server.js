@@ -19,10 +19,14 @@ app.use("/public", express.static(path.resolve(__dirname + "/public")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.get("/data/:id", (req, res, next) => {
+  res.send(require("./searchParams")({ req: req }));
+  res.end();
+});
+
 app.all("*", (req, res, next) => {
   res.send(require("./response")({ req: req }));
   res.end();
-  next();
 });
 
 app.listen(PORT, () => {

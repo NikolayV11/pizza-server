@@ -30,7 +30,7 @@ const sortingElements = [
 module.exports = function sortByRequest(req) {
   //переданные параметры
   const option = req.query;
-  // console.log(option);
+  console.log(option, "option");
 
   // ключи объекта
   const keysObject = Object.keys(req.query);
