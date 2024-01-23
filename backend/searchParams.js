@@ -11,5 +11,6 @@ module.exports = function searchParams({ req }) {
     (item) => item.id === id,
   );
   // ворачивает объект
+  // console.log(dataFiles);
   return dataFiles;
 };
